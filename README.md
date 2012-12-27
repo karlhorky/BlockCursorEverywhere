@@ -20,7 +20,7 @@ Go to your Sublime Text 2 Packages directory:
 and clone the repository there
 	
 	git clone git://github.com/netpro2k/SublimeBlockCursor
-    git clone git://github.com/avidgamer123/SublimeBlockCursor
+    git clone git://github.com/ingshtrom/SublimeBlockCursor
 
 
 ## Configuration ##
