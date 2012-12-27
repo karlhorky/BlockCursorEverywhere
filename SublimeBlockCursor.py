@@ -3,7 +3,7 @@ import sublime_plugin
 
 
 class SublimeBlockCursor(sublime_plugin.EventListener):
-    def view_is_widget(view):
+    def view_is_widget(self, view):
         settings = view.settings()
         return bool(settings.get('is_widget'))
 
