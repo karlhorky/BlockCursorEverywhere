@@ -1,7 +1,8 @@
 {
+  "name": "SublimeBlockCursorEverywhere",
   "url": "https://github.com/ingshtrom/SublimeBlockCursor",
   "version": "1.0.1",
-  "description": "Sublime Text 2 plugin to mimic a block cursor in all modes.",
-  "author": "ingshtrom",
+  "description": "Sublime Text 2 plugin to mimic a block cursor in all modes.  Forked from netpro2k/SublimeBlockCursor.",
+  "author": "ingshtrom && netpro2k",
   "homepage": "http://ingshtrom.tumblr.com"
 }
