@@ -1,4 +1,4 @@
-# SublimeBlockCursor #
+# BlockCursorEverywhere #
 
 ![Screenshot](http://f.cl.ly/items/42131K2X1h0j0P2m1O2B/Screen%20Shot%202011-12-02%20at%202.36.54%20AM.png)
 
@@ -8,19 +8,18 @@ It can become very difficult to keep track of your cursor location. This is solv
 
 ### With Package Control ###
 
-If you have the [Package Control][package_control] installed, you can install SublimeBlockCursor from inside Sublime Text itself. Open the Command Palette and select "Package Control: Install Package", then search for SublimeBlockCursor and you’re done!
+If you have the [Package Control][package_control] installed, you can install BlockCursorEverywhere from inside Sublime Text itself. Open the Command Palette and select "Package Control: Install Package", then search for BlockCursorEverywhere and you’re done!
 
 ### Without Package Control ###
 
 Go to your Sublime Text 2 Packages directory:
 
 	Windows: %USERPROFILE%\AppData\Roaming\Sublime Text 2\Packages\
-	Mac: ~/Library/Application Support/Sublime Text 2/Packages/	
+	Mac: ~/Library/Application Support/Sublime Text 2/Packages/
 
 and clone the repository there
-	
-	git clone git://github.com/netpro2k/SublimeBlockCursor
-    git clone git://github.com/ingshtrom/SublimeBlockCursor
+
+  git clone git://github.com/ingshtrom/BlockCursorEverywhere
 
 
 ## Configuration ##
