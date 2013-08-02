@@ -1,5 +1,8 @@
 # BlockCursorEverywhere #
 
+I apologize, but this is no longer updated.  I don't even use it anymore because of API limitations.  I recommend looking at the original repo by netpro2k.
+
+
 ![Screenshot](http://f.cl.ly/items/42131K2X1h0j0P2m1O2B/Screen%20Shot%202011-12-02%20at%202.36.54%20AM.png)
 
 It can become very difficult to keep track of your cursor location. This is solved by having a "block" cursor, which is very easy to spot no matter where it is on screen. Unfortunately, Sublime Text 2 does not (yet) support this feature natively. This Plugin mimics this functionality by highlighting the area behind the cursor whenever it moves (similar to how you might highlight syntax errors, or color a comment).
