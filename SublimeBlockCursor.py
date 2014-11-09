@@ -1,12 +1,8 @@
 import sublime
 import sublime_plugin
-
+import os
 
 class BlockCursorEverywhere(sublime_plugin.EventListener):
-    def view_is_widget(self, view):
-        settings = view.settings()
-        return bool(settings.get('is_widget'))
-
     def show_block_cursor(self, view):
         validRegions = []
         for s in view.sel():
@@ -18,11 +14,26 @@ class BlockCursorEverywhere(sublime_plugin.EventListener):
         else:
             view.erase_regions('BlockCursorListener')
 
+    def is_vintageous_installed(self):
+        if int(sublime.version()) < 3000:
+            return os.path.isdir(os.path.join(sublime.packages_path(), 'Vintageous'))
+        else:
+            return os.path.exists(os.path.join(sublime.installed_packages_path(), 'Vintageous.sublime-package'))
+
+    def is_enabled(self, view, package_name):
+        return package_name not in view.settings().get('ignored_packages', [])
+
     def on_selection_modified(self, view):
-        no_vintage = view.settings().get('ignored_packages') is None or "Vintage" in view.settings().get('ignored_packages')
-        if view.settings().get('is_widget') or not(no_vintage or view.settings().get('command_mode')):
+        is_widget = view.settings().get('is_widget')
+        vintage = self.is_enabled(view, 'Vintage')
+        vintageous = self.is_vintageous_installed() and self.is_enabled(view, 'Vintageous')
+        vi_enabled = vintage or vintageous
+        command_mode = view.settings().get('command_mode')
+
+        if is_widget or not vi_enabled or (vi_enabled and not(command_mode)):
             view.erase_regions('BlockCursorListener')
             return
+
         self.show_block_cursor(view)
 
     def on_deactivated(self, view):
