@@ -42,8 +42,3 @@ These are the settings that I prefer. You can change the style of the block curs
 	</dict>
 </dict>
 ```
-
----------
-
-[sublime]: http://www.sublimetext.com/3
-[package_control]: http://wbond.net/sublime_packages/package_control
