@@ -2,13 +2,17 @@
 
 ![Screenshot](http://f.cl.ly/items/42131K2X1h0j0P2m1O2B/Screen%20Shot%202011-12-02%20at%202.36.54%20AM.png)
 
-It can become very difficult to keep track of your cursor location, especially with the [Vintage](http://www.sublimetext.com/docs/3/vintage.html) or [Vintageous](https://github.com/guillermooo/Vintageous) plugins. This is solved by having a "block" cursor, which is very easy to spot no matter where it is on screen. Unfortunately, Sublime Text 2 and 3 do not (yet) support this feature natively. This Plugin mimics this functionality by highlighting the area behind the cursor whenever it moves (similar to how you might highlight syntax errors, or color a comment).
+It can become very difficult to keep track of your cursor location, especially with the [Vintage](http://www.sublimetext.com/docs/3/vintage.html) or [Vintageous](https://github.com/guillermooo/Vintageous) plugins. This is solved by having a "block" cursor, which is very easy to spot no matter where it is on screen. Sublime Text 2 and 3 do not yet support this feature natively. This plugin achieves the effect by highlighting a colored region behind the cursor.
 
 ## Installation ##
 
 ### With Package Control ###
 
-If you have the [Package Control][package_control] installed, you can install BlockCursorEverywhere from inside Sublime Text itself. Open the Command Palette and select "Package Control: Install Package", then search for BlockCursorEverywhere and you’re done!
+The easiest way to install Block Cursor Everywhere is via [Package Control](http://wbond.net/sublime_packages/package_control) for Sublime Text.
+
+Once you install Package Control, restart Sublime Text and bring up the Command Palette with <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on OS X or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> on Linux/Windows.
+
+Select `Package Control: Install Package`, wait while Package Control fetches the latest package list, then select `Block Cursor Everywhere` when the list appears. Package Control will automatically keep the package up-to-date.
 
 ### Without Package Control ###
 
