@@ -1,8 +1,12 @@
 import sublime
 import sublime_plugin
 import os
+import time
 
 class BlockCursorEverywhere(sublime_plugin.EventListener):
+    def __init__(self):
+        self.last_check = time.time()
+
     def show_block_cursor(self, view):
         validRegions = []
         for s in view.sel():
@@ -47,4 +51,10 @@ class BlockCursorEverywhere(sublime_plugin.EventListener):
         self.current_view = view
 
     def on_command_mode_change(self):
-        self.on_selection_modified(self.current_view)
+        current_check = time.time()
+        time_difference = current_check - self.last_check
+        self.last_check = current_check
+
+        # 60 FPS, prevent infinite recursion
+        if (time_difference > 0.016):
+            self.on_selection_modified(self.current_view)
