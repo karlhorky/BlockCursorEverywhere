@@ -40,15 +40,15 @@ class BlockCursorEverywhere(sublime_plugin.EventListener):
         self.current_view = None
 
     def on_activated(self, view):
-        self.on_selection_modified(view)
-        view.settings().add_on_change('command_mode', self.on_command_mode_change)
         self.current_view = view
+        self.last_check = time.time()
 
         self.vintage_enabled = self.is_enabled(view, 'Vintage')
         self.vintageous_enabled = self.is_vintageous_installed() and self.is_enabled(view, 'Vintageous')
         self.vi_enabled = self.vintage_enabled or self.vintageous_enabled
 
-        self.last_check = time.time()
+        self.on_selection_modified(view)
+        view.settings().add_on_change('command_mode', self.on_command_mode_change)
 
     def on_command_mode_change(self):
         run = True
