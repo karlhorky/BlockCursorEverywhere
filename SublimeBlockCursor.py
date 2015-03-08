@@ -51,10 +51,14 @@ class BlockCursorEverywhere(sublime_plugin.EventListener):
         self.last_check = time.time()
 
     def on_command_mode_change(self):
-        current_check = time.time()
-        time_difference = current_check - self.last_check
-        self.last_check = current_check
+        run = True
 
-        # 60 FPS, prevent infinite recursion
-        if (time_difference > 0.016):
+        # Prevent recursion and plugin crash https://github.com/karlhorky/BlockCursorEverywhere/issues/11
+        if self.vintageous_enabled:
+            current_check = time.time()
+            time_difference = current_check - self.last_check
+            self.last_check = current_check
+            run = time_difference > 0.0005
+
+        if (run):
             self.on_selection_modified(self.current_view)
