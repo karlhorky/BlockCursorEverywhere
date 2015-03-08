@@ -4,9 +4,6 @@ import os
 import time
 
 class BlockCursorEverywhere(sublime_plugin.EventListener):
-    def __init__(self):
-        self.last_check = time.time()
-
     def show_block_cursor(self, view):
         validRegions = []
         for s in view.sel():
@@ -49,6 +46,8 @@ class BlockCursorEverywhere(sublime_plugin.EventListener):
         self.on_selection_modified(view)
         view.settings().add_on_change('command_mode', self.on_command_mode_change)
         self.current_view = view
+
+        self.last_check = time.time()
 
     def on_command_mode_change(self):
         current_check = time.time()
