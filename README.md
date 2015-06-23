@@ -25,7 +25,7 @@ and clone the repository there.
 
 ## Configuration ##
 
-These are the settings that I prefer. You can change the style of the block cursor by adding a section to your theme file like so:
+Change the style of the block cursor by adding a section to your color scheme file like the following.
 
 ```xml
 <dict>
@@ -42,3 +42,13 @@ These are the settings that I prefer. You can change the style of the block curs
 	</dict>
 </dict>
 ```
+
+The path to your color scheme file can be specified with the `color_scheme` key in your user preferences:
+
+```json
+{
+	"color_scheme": "Packages/User/Monokai (Block Cursor Everywhere).tmTheme"
+}
+```
+
+If you don't have a color scheme file yet, you can create one in your `Packages/User` directory from [this gist](https://gist.github.com/karlhorky/804b6d1fc12f2b9f504e).
