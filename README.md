@@ -1,12 +1,14 @@
-# BlockCursorEverywhere #
+# BlockCursorEverywhere
+
+A block cursor for Sublime Text 2 and 3.
 
 ![Screenshot](http://f.cl.ly/items/42131K2X1h0j0P2m1O2B/Screen%20Shot%202011-12-02%20at%202.36.54%20AM.png)
 
-It can become very difficult to keep track of your cursor location, especially with the [Vintage](http://www.sublimetext.com/docs/3/vintage.html) or [Vintageous](https://github.com/guillermooo/Vintageous) plugins. This is solved by having a "block" cursor, which is very easy to spot no matter where it is on screen. Sublime Text 2 and 3 do not yet support this feature natively. This plugin achieves the effect by highlighting a colored region behind the cursor.
+The default cursor in Sublime Text is a thin line with low visibility. Command mode in the Vintage and Vintageous plugins decreases the visibility even further. This plugin displays the cursor as a rectangular block, increasing its prominence on the screen.
 
-## Installation ##
+## Installation
 
-### With Package Control ###
+### With Package Control
 
 The easiest way to install Block Cursor Everywhere is via [Package Control](http://wbond.net/sublime_packages/package_control) for Sublime Text.
 
@@ -14,7 +16,7 @@ Once you install Package Control, restart Sublime Text and bring up the Command 
 
 Select `Package Control: Install Package`, wait while Package Control fetches the latest package list, then select `Block Cursor Everywhere` when the list appears. Package Control will automatically keep the package up-to-date.
 
-### Without Package Control ###
+### Without Package Control
 
 Go to your Sublime Text Packages directory:
 
@@ -23,7 +25,7 @@ Go to your Sublime Text Packages directory:
 
 and clone the repository there.
 
-## Configuration ##
+## Configuration
 
 Change the style of the block cursor by adding a section to your color scheme file like the following.
 
