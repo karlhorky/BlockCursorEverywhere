@@ -28,7 +28,7 @@ class BlockCursorEverywhere(sublime_plugin.EventListener):
         is_widget = view.settings().get('is_widget')
         command_mode = view.settings().get('command_mode')
 
-        if is_widget or not self.vi_enabled or (self.vi_enabled and not(command_mode)):
+        if is_widget or (self.vi_enabled and not(command_mode)):
             view.erase_regions('BlockCursorListener')
             return
 
